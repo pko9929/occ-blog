@@ -1,0 +1,17 @@
+<app-post-list-item-component *ngFor="let post of postList"
+                              [post]="post">
+</app-post-list-item-component>
+
+<h1>Add Blog Post</h1>
+<form style="margin-left: 10px; margin-right: 10px">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Post Title : </label>
+    <input type="text" name="title" class="form-control" style="width: 50%" [(ngModel)]="aTitle">
+  </div>
+<div class="form-group">
+  <label for="exampleInputEmail1">Post Content : </label>
+  <textarea name="content" class="form-control" [(ngModel)]="aContent"></textarea>
+</div>
+<button type="button" class="btn" style="margin: 5px" (click)="onNewPost()">Add</button>
+</form>
+
